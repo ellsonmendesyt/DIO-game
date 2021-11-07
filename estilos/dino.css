@@ -1,0 +1,87 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow: hidden;
+    background-color:#68cdff;
+
+
+}
+
+
+@keyframes animacao-fundo {
+    from {
+      background-position:0%  0px ;
+    }
+    to {
+      background-position: -2559px 0px;
+    }
+  }
+
+
+
+
+.dino{
+    width: 68px;
+    height: 94px;
+    /* background-color:green; */
+    bottom: 10px;
+    position: absolute;
+    margin: 0;
+    z-index: 999;
+
+    background:url('../assets/mario.png') 0 0 no-repeat;
+    /* transform: scaleX(-1); */
+    animation: correr infinite  steps(3) .3s;
+    /* outline: 1px solid black; */
+}
+
+
+@keyframes correr{
+  from{
+        background-position: 0px;
+    }
+    to{
+        background-position: -217px;
+
+    }
+}
+
+
+.cactus{
+    width: 20px;
+    height: 30px;
+    background-color:brown;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    margin: 0;
+}
+
+
+.chao{
+    /* overflow:hidden; */
+
+    height: 100vh;
+    
+ 
+
+}
+
+.bg{
+    background-image: url('../assets/bg1.png');
+    background-size: contain;
+    
+   
+   position: absolute;
+   left: 0;
+   right: 0;
+   height: 400px;
+   
+    /* background-repeat: repeat-x; */
+    bottom: -50px;
+    animation: animacao-fundo 23s linear infinite ;
+}
