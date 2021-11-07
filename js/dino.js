@@ -1,11 +1,15 @@
 const log=console.log;
 const dino = document.querySelector('.dino');
+dino.style.left='0px';
+
+
 const chao = document.querySelector('.chao');
 
 
 let posicao=-10;
 let base=15;
 let pico = 180;
+let vel = 40;
 
 function handlekeyUp(e){
     if(e.keyCode===32 || e.keyCode===38){
@@ -15,6 +19,11 @@ function handlekeyUp(e){
         }
     }
 }
+
+
+
+
+
 
 let estaPulando= false;
 
@@ -99,4 +108,16 @@ criarCactus();
 
 
 document.addEventListener('keydown',handlekeyUp)
+document.addEventListener('keydown',
+function andar(e){
+ switch(e.key){
+     case "ArrowRight":
+         dino.style.left = parseInt(dino.style.left)+ vel + 'px';
+         break;
+         case "ArrowLeft":
+             
+             dino.style.left = parseInt(dino.style.left) - vel + 'px';
+        break;
+ }
+})
 
